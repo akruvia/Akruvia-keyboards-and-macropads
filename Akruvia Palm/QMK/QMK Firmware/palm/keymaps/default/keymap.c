@@ -60,7 +60,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             rgblight_setrgb_at(1, 0, 0, RGB_UPPER_LAYER_LED);
             break;
         default: //  for any other layers, or the default layer
-            rgblight_setrgb_range(0, 0, 0, RGB_LOWER_LAYER_LED, RGB_EXTRA_LED);
+            rgblight_setrgb_at(0, 0, 0, RGB_LOWER_LAYER_LED);
+            rgblight_setrgb_at(0, 0, 0, RGB_UPPER_LAYER_LED);
+            rgblight_setrgb_at(0, 0, 0, RGB_EXTRA_LED);
             break;
     }
     return state;
